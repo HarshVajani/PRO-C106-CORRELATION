@@ -1,7 +1,12 @@
+import plotly.express as px
 import csv
 import numpy as np
 
-
+def plotFigure(data_path):
+    with open(data_path) as csv_file:
+        df = csv.DictReader(csv_file)
+        fig = px.scatter(df,x="Cups Of Coffee", y="Hours Of Sleep")
+        fig.show()
 def getDataSource(data_path):
     cups_of_coffee = []
     hours_of_sleep = []
@@ -18,9 +23,10 @@ def findCorrelation(datasource):
     print("Correlation between Cups Of Coffee and Hours Of Sleep :- \n--->",correlation[0,1])
 
 def setup():
-    data_path = "C:\Users\hitesh\Desktop\Whitehat.Jr\Project 106\cups of coffee vs hours of sleep.csv"
+    data_path  = "C:\Users\Harsh\Desktop\WhiteHat.Jr\Project\106\cups of coffee vs hours of sleep.csv"
 
     datasource = getDataSource(data_path)
     findCorrelation(datasource)
+    plotFigure(data_path)
 
 setup()
