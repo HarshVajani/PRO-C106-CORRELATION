@@ -23,7 +23,7 @@ def findCorrelation(datasource):
     print("Correlation between Cups Of Coffee and Hours Of Sleep :- \n--->",correlation[0,1])
 
 def setup():
-    data_path  = "C:\Users\Harsh\Desktop\WhiteHat.Jr\Project\106\cups of coffee vs hours of sleep.csv"
+    data_path  = "C:\Users\Harsh\Desktop\WhiteHat.Jr\Class\106\PRO-C106-CORRELATION-main\cups of coffee vs hours of sleep.csv"
 
     datasource = getDataSource(data_path)
     findCorrelation(datasource)
